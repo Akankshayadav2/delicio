@@ -80,14 +80,22 @@
 
 /* View Details Button */
 .view-details {
-    background-color: #1e1c1c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    /* View Details Button */
+.view-details {
+    background-color: transparent;  /* Remove background color */
+    color: inherit;                 /* Inherit text color from parent */
+    padding: 0;                     /* Adjust padding */
+    border: none;                   /* Remove border */
+    font-style: italic;             /* Make text italic */
+    cursor: pointer;                /* Change cursor to pointer */
+    transition: text-decoration 0.3s ease; /* Transition for hover effect */
+}
+
+/* Optional: Add hover effect */
+.view-details:hover {
+    text-decoration: underline;      /* Underline text on hover for better visibility */
+}
+
 }
 
 .view-details:hover {
