@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Food Card Section -->
+    <section class="food-card-section" id="food-menu">
+        <h2>Our Special Menu</h2>
+        <div class="food-cards">
+            <!-- Example Food Card 1 -->
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+            <!-- Example Food Card 2 -->
+            <div class="food-card" data-food="Burger" data-price="$8">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1627378378938-291417b4210c?w=500&auto=format&fit=crop&q=60" alt="Burger" class="food-img">
+                <div class="food-info">
+                    <h3>Burger</h3>
+                    <p class="food-price">$8</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+
+
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+
+
+
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+
+
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+ 
+            <div class="food-card" data-food="Pizza" data-price="$12">
+                <i class="fas fa-heart favorite-icon"></i>
+                <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60" alt="Pizza" class="food-img">
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p class="food-price">$12</p>
+                    <a href="view.html"><button class="view-details">View Details</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Add JavaScript to handle favorites -->
+    <script>
+        document.querySelectorAll('.favorite-icon').forEach(icon => {
+            icon.addEventListener('click', function () {
+                const card = this.closest('.food-card');
+                const food = card.dataset.food;
+                const price = card.dataset.price;
+
+                let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+                
+                if (!favorites.some(item => item.food === food)) {
+                    favorites.push({ food, price });
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                    alert(`${food} added to favorites`);
+                } else {
+                    alert(`${food} is already in favorites`);
+                }
+
+                this.classList.toggle('active');  // Optional: Change icon color when clicked
+            });
+        });
+    </script>
+</body>
+</html>

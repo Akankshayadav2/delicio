@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    background-image: url('https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=2048x2048&w=is&k=20&c=azft1MVw7FNLT3CjwcHTaPuYbJLlazIMZbJRxLYVsbA='); /* Replace with your food-themed image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.1); /* Optional: Darkens the image slightly to increase text readability */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for contrast */
+    border-radius: 10px;
+    padding: 40px;
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #ff7043;
+    margin-bottom: 10px;
+  }
+  
+  .brand-name {
+    color: #ff7043;
+  }
+  
+  .subtitle {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #ff7043;
+  }
+  
+  .submit-btn {
+    background-color: #ff7043;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e55e36;
+  }
+  
+  .alternative {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .alternative a {
+    color: #ff7043;
+    text-decoration: none;
+  }
+  
+  .alternative a:hover {
+    text-decoration: underline;
+  }
+  

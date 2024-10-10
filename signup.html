@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicio - Signup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <!-- Background Image Section -->
+  <div class="background-image"></div>
+  
+  <div class="container">
+    <div class="form-container">
+      <h1>Welcome to <span class="brand-name">Delicio</span></h1>
+      <p class="subtitle">Sign up to get delicious food delivered to your doorstep!</p>
+
+      <!-- Signup form -->
+      <form id="signup-form" action="#" method="POST">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+
+      <!-- New to Delicio or Login options -->
+      <div class="alternative">
+        <p>New to Delicio? <a href="/signup">Create an account</a></p>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Handle form submission to save signup date to localStorage
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+      
+      // Capture signup data (name, email, password) and the signup date
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const signupDate = new Date().toLocaleString(); // Get current date and time
+
+      // Store data in localStorage
+      localStorage.setItem('userName', name);
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+      localStorage.setItem('signupDate', signupDate);
+
+      // Show confirmation or proceed to another page
+      alert('Signup successful! Welcome to Delicio. Your signup date is saved.');
+
+      // Optionally, redirect to another page (like login or dashboard)
+      // window.location.href = "/login";
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicio - Place Order</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <div class="order-container">
+    <h1>Place Your Order at <span class="brand-name">Delicio</span></h1>
+
+    <!-- Order form -->
+    <form id="order-form">
+      <div class="form-group">
+        <label for="customer-name">Full Name</label>
+        <input type="text" id="customer-name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="customer-email">Email</label>
+        <input type="email" id="customer-email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="customer-location">Location</label>
+        <input type="text" id="customer-location" name="location" placeholder="Enter your delivery location" required>
+      </div>
+
+      <div class="form-group">
+        <label for="food-item">Food Item</label>
+        <input type="text" id="food-item" name="food-item" placeholder="Enter food item" required>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+      </div>
+
+      <div class="form-group">
+        <label for="additional-notes">Additional Notes (optional)</label>
+        <textarea id="additional-notes" name="notes" placeholder="Any special instructions?" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Place Order</button>
+    </form>
+
+    <p id="success-message" class="success-message"></p>
+  </div>
+
+  <script>
+    // Handle order form submission
+    document.getElementById('order-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      // Capture the form data
+      const name = document.getElementById('customer-name').value;
+      const email = document.getElementById('customer-email').value;
+      const location = document.getElementById('customer-location').value;
+      const foodItem = document.getElementById('food-item').value;
+      const quantity = document.getElementById('quantity').value;
+      const notes = document.getElementById('additional-notes').value;
+
+      // Create an order object to store
+      const orderDetails = {
+        name: name,
+        email: email,
+        location: location,
+        foodItem: foodItem,
+        quantity: quantity,
+        notes: notes,
+        orderDate: new Date().toLocaleString() // Add timestamp of the order
+      };
+
+      // Store the order details in localStorage (or send to a server if needed)
+      localStorage.setItem('lastOrder', JSON.stringify(orderDetails));
+
+      // Show a success message
+      document.getElementById('success-message').textContent = 'Order placed successfully! Thank you for choosing Delicio.';
+
+      // Optionally redirect to an order confirmation page
+      // window.location.href = "order-confirmation.html";
+    });
+  </script>
+</body>
+</html>

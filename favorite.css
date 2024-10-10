@@ -1,0 +1,87 @@
+/* General Styling for the Favorite Card Section */
+.food-card-section {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.food-card-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Favorite Cards Layout */
+.food-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Individual Favorite Card */
+.food-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    position: relative; /* Needed for positioning the icon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Favorite Icon in Active State */
+.favorite-icon {
+    font-size: 1.5rem;
+    color: #ff6347;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Icon changes color when active (when the item is already in favorites) */
+.favorite-icon.active {
+    color: #ff4500;
+}
+
+/* Food Info Styling */
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.food-info .food-price {
+    font-size: 1.2rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Remove Button Styling */
+.remove-favorite {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-favorite:hover {
+    background-color: #c0392b;
+}

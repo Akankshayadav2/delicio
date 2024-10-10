@@ -1,0 +1,106 @@
+/* General Container Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.food-details-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Column: Food Image */
+.food-image img {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 400px;
+    margin-top: 110px;
+}
+
+/* Right Column: Food Details */
+.food-info {
+    max-width: 700px;
+    background-color: #ffeaea;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    height: 500px;
+}
+
+.food-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.food-info .price {
+    font-size: 1.5rem;
+    color: #ff6347;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Accordion Styling */
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #f7f7f7;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e7e7e7;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+}
+
+.accordion-content p, .accordion-content ul {
+    margin: 15px 0;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+}
+
+/* Order Button */
+.order-button {
+    display: block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #ff4500;
+}

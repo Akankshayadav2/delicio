@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Details</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+    <div class="food-details-container">
+        <!-- Left Column: Food Image -->
+        <div class="food-image">
+            <img src="https://images.unsplash.com/photo-1625937759420-26d7e003e04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNoaWNrZW4lMjB3aW5nc3xlbnwwfHwwfHx8MA%3D%3D" alt="Food Image">
+        </div>
+
+        <!-- Right Column: Food Details with Accordion -->
+        <div class="food-info">
+            <h1>Pizza</h1>
+            <p class="price">$12</p>
+
+            <!-- Accordion Section -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Description</button>
+                    <div class="accordion-content">
+                        <p>A classic Italian dish with a thin crust, topped with cheese, tomato sauce, and a variety of fresh toppings. A must-try for food lovers!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">Ingredients</button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Tomato Sauce</li>
+                            <li>Mozzarella Cheese</li>
+                            <li>Olive Oil</li>
+                            <li>Fresh Basil</li>
+                            <li>Oregano</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">Nutritional Info</button>
+                    <div class="accordion-content">
+                        <p>Calories: 250 per slice | Fat: 10g | Protein: 12g | Carbs: 30g</p>
+                    </div>
+                </div>
+            </div>
+
+      <a href="order.html">
+        <button class="order-button">Order Now</button> 
+      </a>
+        </div>
+    </div>
+
+    <script src="view.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
